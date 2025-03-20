@@ -18,6 +18,10 @@
             android:id="@+id/action_fiveColor"
             app:destination="@id/fiveColor"
             />
+        <action
+            android:id="@+id/action_EmailForm"
+            app:destination="@id/emailForm"
+            />
     </fragment>
     <fragment
         android:id="@+id/editText"
@@ -29,4 +33,9 @@
         android:name="com.example.daberdevporto.FiveColor"
         android:label="fragment_five_color"
         tools:layout="@layout/fragment_five_color" />
+    <fragment
+        android:id="@+id/emailForm"
+        android:name="com.example.daberdevporto.EmailForm"
+        android:label="fragment_email_form"
+        tools:layout="@layout/fragment_email_form" />
 </navigation>

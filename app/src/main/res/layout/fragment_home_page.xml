@@ -6,27 +6,72 @@
     tools:context=".HomePage">
 
     <LinearLayout
+        android:paddingHorizontal="40dp"
         android:gravity="center"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Hello World!" />
+            android:text="Daberdev" />
+        <TextView
+            android:layout_marginBottom="20dp"
+            android:textSize="17sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="just try anything that make u courious" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                >
+
+                <ImageView
+                    android:layout_weight="1"
+                    android:src="@drawable/daber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    />
+
+                <TextView
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:textSize="20sp"
+                    android:gravity="center|start"
+                    android:text="Check my other project"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
 
         <Button
             android:id="@+id/five_color"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Go to Five Color"
             />
         <Button
             android:id="@+id/edit_text"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Go to Edit Text"
+            />
+        <Button
+            android:id="@+id/email_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Go to Email Form"
             />
     </LinearLayout>
 
