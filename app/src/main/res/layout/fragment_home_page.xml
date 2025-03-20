@@ -23,7 +23,7 @@
             android:textSize="17sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="just try anything that make u courious" />
+            android:text="just try anything that make u curious" />
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"

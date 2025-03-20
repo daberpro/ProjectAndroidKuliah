@@ -76,11 +76,10 @@ public class EmailForm extends Fragment {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             NotificationChannel channel = new NotificationChannel("dabdev","deb", NotificationManager.IMPORTANCE_DEFAULT);
             kirim.setOnClickListener(v ->{
-                Notification noti = new Notification.Builder(getContext())
+                Notification noti = new Notification.Builder(getContext(),"dabdev")
                 .setContentTitle(subjek.getText())
-                .setContentText(kepada.getText() + "" + pesan.getText())
+                .setContentText(kepada.getText() + " : " + pesan.getText())
                 .setSmallIcon(R.mipmap.ic_launcher)
-                .setChannelId("dabdev")
                 .build();
 
                 NotificationManager manager = (NotificationManager) getActivity().getSystemService(Context.NOTIFICATION_SERVICE);

@@ -28,16 +28,17 @@ public class MainActivity extends AppCompatActivity {
 
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU){
             if(ContextCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED){
+                Toast notif = Toast.makeText(this,"Akses notifikasi ditolak",Toast.LENGTH_LONG);
+                notif.show();
                 ActivityCompat.requestPermissions(
                         this,
                         new String[]{Manifest.permission.POST_NOTIFICATIONS},
                         1
                 );
 
-                Toast notif = Toast.makeText(this,"Akses notifikasi berhasil",Toast.LENGTH_LONG);
-                notif.show();
+
             }else{
-                Toast notif = Toast.makeText(this,"Akses notifikasi ditolak",Toast.LENGTH_LONG);
+                Toast notif = Toast.makeText(this,"Akses notifikasi berhasil",Toast.LENGTH_LONG);
                 notif.show();
             }
         }
