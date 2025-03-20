@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TextEdit">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp"
+        >
+        <TextView
+            android:text="Nama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <EditText
+                android:layout_weight="10"
+                android:id="@+id/input_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:hint="Isikan Nama Anda"
+                android:drawableStart="@android:drawable/btn_star"
+                />
+            <Button
+                android:id="@+id/process_text"
+                android:layout_weight="1"
+                android:text="OK"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                />
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/username"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:text=""
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+
+    </LinearLayout>
+
+</FrameLayout>
