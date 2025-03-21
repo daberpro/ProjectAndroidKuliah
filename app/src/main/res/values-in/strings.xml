@@ -1,0 +1,14 @@
+<resources>
+    <string name="form_type">Formulir Multi Bahasa</string>
+    <string name="app_name">Daberdev Porto</string>
+    <string name="username">Nama Pengguna</string>
+    <string name="password">Kata Sandi</string>
+    <string name="login">Masuk</string>
+    <string name="region">Wilayah</string>
+    <string-array name="regions">
+        <item>Kalimantan Barat</item>
+        <item>Kalimantan Utara</item>
+        <item>Kalimantan Selatan</item>
+        <item>Jawa Barat</item>
+    </string-array>
+</resources>

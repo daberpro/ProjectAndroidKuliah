@@ -54,15 +54,22 @@ public class HomePage extends Fragment {
         Button FiveColor = (Button) view.findViewById(R.id.five_color);
         Button EditText = (Button) view.findViewById(R.id.edit_text);
         Button EmailForm = (Button) view.findViewById(R.id.email_form);
+        Button MultiLang = (Button) view.findViewById(R.id.multi_language);
+
         FiveColor.setOnClickListener(v ->{
             Navigation.findNavController(view).navigate(R.id.action_fiveColor);
         });
+
         EditText.setOnClickListener(v ->{
             Navigation.findNavController(view).navigate(R.id.action_editText);
         });
 
         EmailForm.setOnClickListener(v ->{
             Navigation.findNavController(view).navigate(R.id.action_EmailForm);
+        });
+
+        MultiLang.setOnClickListener(v ->{
+            Navigation.findNavController(view).navigate(R.id.action_MultiLang);
         });
     }
 

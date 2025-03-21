@@ -13,14 +13,34 @@
         <action
             android:id="@+id/action_editText"
             app:destination="@id/editText"
+            app:popEnterAnim="@anim/slide_in"
+            app:popExitAnim="@anim/fade_out"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
             />
         <action
             android:id="@+id/action_fiveColor"
             app:destination="@id/fiveColor"
+            app:popEnterAnim="@anim/slide_in"
+            app:popExitAnim="@anim/fade_out"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
             />
         <action
             android:id="@+id/action_EmailForm"
             app:destination="@id/emailForm"
+            app:popEnterAnim="@anim/slide_in"
+            app:popExitAnim="@anim/fade_out"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            />
+        <action
+            android:id="@+id/action_MultiLang"
+            app:destination="@id/multiLanguage"
+            app:popEnterAnim="@anim/slide_in"
+            app:popExitAnim="@anim/fade_out"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
             />
     </fragment>
     <fragment
@@ -38,4 +58,9 @@
         android:name="com.example.daberdevporto.EmailForm"
         android:label="fragment_email_form"
         tools:layout="@layout/fragment_email_form" />
+    <fragment
+        android:id="@+id/multiLanguage"
+        android:name="com.example.daberdevporto.MultiLanguage"
+        android:label="fragment_multi_language"
+        tools:layout="@layout/fragment_multi_language" />
 </navigation>
