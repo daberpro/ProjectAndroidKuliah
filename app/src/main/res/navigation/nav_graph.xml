@@ -50,6 +50,14 @@
             app:enterAnim="@anim/slide_in"
             app:exitAnim="@anim/fade_out"
             />
+        <action
+            android:id="@+id/action_WebView"
+            app:destination="@id/webView"
+            app:popEnterAnim="@anim/slide_in"
+            app:popExitAnim="@anim/fade_out"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            />
     </fragment>
     <fragment
         android:id="@+id/editText"
@@ -76,4 +84,9 @@
         android:name="com.example.daberdevporto.MultipleInstance"
         android:label="fragment_multiple_instance"
         tools:layout="@layout/fragment_multiple_instance" />
+    <fragment
+        android:id="@+id/webView"
+        android:name="com.example.daberdevporto.WebView"
+        android:label="fragment_web_view"
+        tools:layout="@layout/fragment_web_view" />
 </navigation>
