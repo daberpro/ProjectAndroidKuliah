@@ -91,6 +91,12 @@
             android:layout_height="wrap_content"
             android:text="Go to Web View"
             />
+        <Button
+            android:id="@+id/webviewlanjutan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Go to Web View Lanjutan"
+            />
     </LinearLayout>
 
 

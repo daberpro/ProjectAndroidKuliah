@@ -57,6 +57,7 @@ public class HomePage extends Fragment {
         Button MultiLang = (Button) view.findViewById(R.id.multi_language);
         Button MultiIntent = (Button) view.findViewById(R.id.multi_intent);
         Button WebView = (Button) view.findViewById(R.id.webview);
+        Button WebViewLanjutan = (Button) view.findViewById(R.id.webviewlanjutan);
 
         FiveColor.setOnClickListener(v ->{
             Navigation.findNavController(view).navigate(R.id.action_fiveColor);
@@ -80,6 +81,10 @@ public class HomePage extends Fragment {
 
         WebView.setOnClickListener(v ->{
             Navigation.findNavController(view).navigate(R.id.action_WebView);
+        });
+
+        WebViewLanjutan.setOnClickListener(v ->{
+            Navigation.findNavController(view).navigate(R.id.action_WebViewLanjutan);
         });
     }
 
