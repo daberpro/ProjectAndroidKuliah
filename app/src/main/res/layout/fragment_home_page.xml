@@ -97,6 +97,18 @@
             android:layout_height="wrap_content"
             android:text="Go to Web View Lanjutan"
             />
+        <Button
+            android:id="@+id/spinnerTrain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Go to Spinner Default"
+            />
+        <Button
+            android:id="@+id/webviewAngular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Go to WebView Angular"
+            />
     </LinearLayout>
 
 

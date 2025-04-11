@@ -66,6 +66,22 @@
             app:enterAnim="@anim/slide_in"
             app:exitAnim="@anim/fade_out"
             />
+        <action
+            android:id="@+id/action_SpinnerTrain"
+            app:destination="@id/spinnerTrain"
+            app:popEnterAnim="@anim/slide_in"
+            app:popExitAnim="@anim/fade_out"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            />
+        <action
+            android:id="@+id/action_HybridApp"
+            app:destination="@id/hybridApp"
+            app:popEnterAnim="@anim/slide_in"
+            app:popExitAnim="@anim/fade_out"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            />
     </fragment>
     <fragment
         android:id="@+id/editText"
@@ -102,4 +118,14 @@
         android:name="com.example.daberdevporto.WebViewLanjutan"
         android:label="fragment_web_view_lanjutan"
         tools:layout="@layout/fragment_web_view_lanjutan" />
+    <fragment
+        android:id="@+id/spinnerTrain"
+        android:name="com.example.daberdevporto.SpinnerTrain"
+        android:label="fragment_spinner_train"
+        tools:layout="@layout/fragment_spinner_train" />
+    <fragment
+        android:id="@+id/hybridApp"
+        android:name="com.example.daberdevporto.HybridApp"
+        android:label="fragment_hybrid_app"
+        tools:layout="@layout/fragment_hybrid_app" />
 </navigation>
