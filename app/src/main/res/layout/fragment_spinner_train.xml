@@ -11,12 +11,19 @@
         android:layout_height="match_parent"
         android:padding="20dp"
         >
-
+        <TextView
+            android:id="@+id/label1"
+            app:layout_constraintBottom_toTopOf="@id/default_spinner"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Default Spinner"
+            />
         <Spinner
             android:id="@+id/default_spinner"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/label1"
             />
 
         <TextView
@@ -34,6 +41,20 @@
             app:layout_constraintTop_toBottomOf="@id/label2"
             android:layout_width="match_parent"
             android:layout_height="70dp"
+            />
+        <TextView
+            android:id="@+id/label3"
+            app:layout_constraintBottom_toTopOf="@id/default_spinner_loop"
+            app:layout_constraintTop_toBottomOf="@id/custom_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Default Spinner With Loop"
+            />
+        <Spinner
+            android:id="@+id/default_spinner_loop"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:layout_constraintTop_toBottomOf="@id/label3"
             />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

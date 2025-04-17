@@ -70,6 +70,7 @@ public class SpinnerTrain extends Fragment {
 
         Spinner spinner = view.findViewById(R.id.default_spinner);
         Spinner custom_spinner = view.findViewById(R.id.custom_spinner);
+        Spinner spinner_loop = view.findViewById(R.id.default_spinner_loop);
 
         List<String> NamaBuah = new ArrayList<>();
         NamaBuah.add("Apel");
@@ -90,6 +91,13 @@ public class SpinnerTrain extends Fragment {
 
         CustomSpinnerModel customModel = new CustomSpinnerModel(getContext(),Negara);
         custom_spinner.setAdapter(customModel);
+
+        List<String> counting = new ArrayList<>();
+        for(int i = 0; i < 40; i++){
+            counting.add("Angka ke "+Integer.toString(i));
+        }
+        ArrayAdapter<String> data_loop = new ArrayAdapter<String>(getContext(), android.R.layout.simple_list_item_1,counting);
+        spinner_loop.setAdapter(data_loop);
 
     }
 
