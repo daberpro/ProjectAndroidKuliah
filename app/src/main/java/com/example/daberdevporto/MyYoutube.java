@@ -9,20 +9,17 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
-
-import com.example.daberdevporto.model.CustomSpinnerModel;
-
-import java.util.ArrayList;
-import java.util.List;
+import android.webkit.WebChromeClient;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link SpinnerTrain#newInstance} factory method to
+ * Use the {@link MyYoutube#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class SpinnerTrain extends Fragment {
+public class MyYoutube extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -33,7 +30,7 @@ public class SpinnerTrain extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public SpinnerTrain() {
+    public MyYoutube() {
         // Required empty public constructor
     }
 
@@ -43,11 +40,11 @@ public class SpinnerTrain extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment SpinnerTrain.
+     * @return A new instance of fragment MyYoutube.
      */
     // TODO: Rename and change types and number of parameters
-    public static SpinnerTrain newInstance(String param1, String param2) {
-        SpinnerTrain fragment = new SpinnerTrain();
+    public static MyYoutube newInstance(String param1, String param2) {
+        MyYoutube fragment = new MyYoutube();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -68,43 +65,23 @@ public class SpinnerTrain extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        Spinner spinner = view.findViewById(R.id.default_spinner);
-        Spinner custom_spinner = view.findViewById(R.id.custom_spinner);
-        Spinner spinner_loop = view.findViewById(R.id.default_spinner_loop);
+        WebView webView = view.findViewById(R.id.webview);
 
-        List<String> NamaBuah = new ArrayList<>();
-        NamaBuah.add("Apel");
-        NamaBuah.add("Anggur");
-        NamaBuah.add("Pisang");
-        NamaBuah.add("Kelapa");
-        NamaBuah.add("Alpukat");
+        webView.setWebViewClient(new WebViewClient());
+        webView.setWebChromeClient(new WebChromeClient());
 
-        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_list_item_1,NamaBuah);
-        spinner.setAdapter(dataAdapter);
+        WebSettings webSettings = webView.getSettings();
+        webSettings.setJavaScriptEnabled(true);
+        webSettings.setDomStorageEnabled(true);
 
-        List<String> Negara = new ArrayList<>();
-        Negara.add("Albania");
-        Negara.add("Belgia");
-        Negara.add("Hungary");
-        Negara.add("Iran");
-        Negara.add("slovenia");
-
-        CustomSpinnerModel customModel = new CustomSpinnerModel(getContext(),Negara);
-        custom_spinner.setAdapter(customModel);
-
-        List<String> counting = new ArrayList<>();
-        for(int i = 0; i < 40; i++){
-            counting.add("Angka ke "+i);
-        }
-        ArrayAdapter<String> data_loop = new ArrayAdapter<String>(getContext(), android.R.layout.simple_list_item_1,counting);
-        spinner_loop.setAdapter(data_loop);
-
+        String default_url = "https://www.youtube.com/@DaberCoding";
+        webView.loadUrl(default_url);
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_spinner_train, container, false);
+        return inflater.inflate(R.layout.fragment_my_youtube, container, false);
     }
 }

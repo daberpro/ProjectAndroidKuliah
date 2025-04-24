@@ -1,5 +1,6 @@
 package com.example.daberdevporto.model;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -43,7 +44,7 @@ public class CustomSpinnerModel extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        View view = LayoutInflater.from(this.m_ctx).inflate(R.layout.custom_spinner,null);
+        @SuppressLint("ViewHolder") View view = LayoutInflater.from(this.m_ctx).inflate(R.layout.custom_spinner,null);
         ImageView country_flag = view.findViewById(R.id.county_flags);
         TextView country_name = view.findViewById(R.id.country_name);
 

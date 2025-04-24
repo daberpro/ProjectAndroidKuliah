@@ -82,6 +82,14 @@
             app:enterAnim="@anim/slide_in"
             app:exitAnim="@anim/fade_out"
             />
+        <action
+            android:id="@+id/action_TabViewLearn"
+            app:destination="@id/tabViewLearn"
+            app:popEnterAnim="@anim/slide_in"
+            app:popExitAnim="@anim/fade_out"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            />
     </fragment>
     <fragment
         android:id="@+id/editText"
@@ -128,4 +136,14 @@
         android:name="com.example.daberdevporto.HybridApp"
         android:label="fragment_hybrid_app"
         tools:layout="@layout/fragment_hybrid_app" />
+    <fragment
+        android:id="@+id/tabView2"
+        android:name="com.example.daberdevporto.TabView"
+        android:label="fragment_tab_view"
+        tools:layout="@layout/fragment_tab_view" />
+    <fragment
+        android:id="@+id/tabViewLearn"
+        android:name="com.example.daberdevporto.TabViewLearn"
+        android:label="fragment_tab_view_learn"
+        tools:layout="@layout/fragment_tab_view_learn" />
 </navigation>
