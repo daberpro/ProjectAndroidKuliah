@@ -17,9 +17,9 @@ import com.example.daberdevporto.STMIKPontianak;
 
 public class TabLayoutAdapter extends FragmentStateAdapter {
 
-    private MyGithub MyGithubFragment = new MyGithub();
-    private MyYoutube MyYoutubeFragment = new MyYoutube();
-    private STMIKPontianak STMIKPontianakFragment = new STMIKPontianak();
+    private final MyGithub MyGithubFragment = new MyGithub();
+    private final MyYoutube MyYoutubeFragment = new MyYoutube();
+    private final STMIKPontianak STMIKPontianakFragment = new STMIKPontianak();
     private int TabCount = 0;
 
     public TabLayoutAdapter(@NonNull Fragment fragment, int tabCount) {
@@ -31,10 +31,7 @@ public class TabLayoutAdapter extends FragmentStateAdapter {
     @Override
     public Fragment createFragment(int position) {
 
-        Log.d("Position tab", "Position : " + position);
         switch(position){
-            case 0:
-                return this.MyGithubFragment;
             case 1:
                 return this.MyYoutubeFragment;
             case 2:

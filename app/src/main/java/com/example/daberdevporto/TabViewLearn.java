@@ -71,7 +71,7 @@ public class TabViewLearn extends Fragment {
         TabLayout tabLayout = view.findViewById(R.id.tabLayout);
         tabLayout.addTab(tabLayout.newTab().setText("My Github").setIcon(R.drawable.ic_fab_github));
         tabLayout.addTab(tabLayout.newTab().setText("My Youtube").setIcon(R.drawable.ic_fab_youtube));
-        tabLayout.addTab(tabLayout.newTab().setText("STMIK Pontianak"));
+        tabLayout.addTab(tabLayout.newTab().setText("STMIK Pontianak").setIcon(R.drawable.ic_far_user_circle));
 
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
@@ -80,6 +80,16 @@ public class TabViewLearn extends Fragment {
         TabLayoutAdapter adapter = new TabLayoutAdapter(this,tabLayout.getTabCount());
         viewPager.setAdapter(adapter);
         viewPager.setOffscreenPageLimit(3);
+
+        viewPager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
+            @Override
+            public void onPageSelected(int position) {
+                super.onPageSelected(position);
+                if(position != tabLayout.getSelectedTabPosition()){
+                    tabLayout.selectTab(tabLayout.getTabAt(position));
+                }
+            }
+        });
 
         tabLayout.addOnTabSelectedListener( new TabLayout.OnTabSelectedListener(){
 
